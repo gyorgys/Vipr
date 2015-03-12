@@ -9,6 +9,7 @@ namespace Microsoft.OneDrive.RestProxy
         private DataServiceContextWrapper _context;
         private string _continuationToken;
         private IReadOnlyList<TElement> _currentPage;
+        private object p;
 
         // Creator - should be faster than Activator.CreateInstance
         public static PagedCollection<TElement, TConcrete> Create(DataServiceContextWrapper context,
@@ -25,21 +26,28 @@ namespace Microsoft.OneDrive.RestProxy
             _continuationToken = qor.GetContinuationToken();
         }
 
-        public PagedCollection(DataServiceContextWrapper context, DataServiceCollection<TConcrete> collection)
+        public PagedCollection(DataServiceContextWrapper context, Collection<TConcrete> collection)
         {
             _context = context;
             _currentPage = (IReadOnlyList<TElement>)collection;
             if (_currentPage != null)
             {
-                _continuation = collection.Continuation;
+                _continuationToken = collection.ContinuationToken;
             }
+        }
+
+        public PagedCollection(DataServiceContextWrapper _context, object p)
+        {
+            // TODO: Complete member initialization
+            this._context = _context;
+            this.p = p;
         }
 
         public bool MorePagesAvailable
         {
             get
             {
-                return _continuation != null;
+                return _continuationToken != null;
             }
         }
 
@@ -53,11 +61,11 @@ namespace Microsoft.OneDrive.RestProxy
 
         public async Task<IPagedCollection<TElement>> GetNextPageAsync()
         {
-            if (_continuation != null)
+            if (_continuationToken != null)
             {
-                var task = _context.ExecuteAsync<TConcrete, TElement>(_continuation);
+                var task = _context.ExecuteAsync<TConcrete, TElement>(_continuationToken);
 
-                return new PagedCollection<TElement, TConcrete>(_context, await task);
+                return null; // new PagedCollection<TElement, TConcrete>(_context, await task);
             }
 
             return (IPagedCollection<TElement>)null;

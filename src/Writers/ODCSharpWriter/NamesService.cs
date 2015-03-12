@@ -8,12 +8,12 @@ namespace ODCSharpWriter
 {
     internal static class NamesService
     {
-        private const string DataServiceKey = "EntityKey";
-        private const string EntitySet = "EntitySet";
-        //private const string ProtocolVersion = "global::Microsoft.OData.Client.ODataProtocolVersion";
-        //private const string CurrentProtocolVersion = "global::Microsoft.OData.Client.ODataProtocolVersion.V4";
+        private const string DataServiceKey = "global::Microsoft.OData.Client.Key";
+        private const string EntitySet = "global::Microsoft.OData.Client.EntitySet";
+        private const string ProtocolVersion = "global::Microsoft.OData.Client.ODataProtocolVersion";
+        private const string CurrentProtocolVersion = "global::Microsoft.OData.Client.ODataProtocolVersion.V4";
 
-        public const String ExtensionNamespace = "Microsoft.OneDrive.RestProxy";
+        public const String ExtensionNamespace = "Microsoft.OData.ProxyExtensions";
 
         public static Identifier GetPublicTypeName(OdcmType odcmType)
         {
@@ -27,7 +27,7 @@ namespace ODCSharpWriter
                 return new Identifier(string.Empty, "void");
             }
 
-            if (string.Equals(odcmType.Namespace, "Edm", StringComparison.OrdinalIgnoreCase))
+            if (odcmType.Namespace == OdcmNamespace.Edm)
             {
                 return GetPrimitiveTypeName(odcmType);
             }
@@ -83,9 +83,10 @@ namespace ODCSharpWriter
                 case "Int64": return new Identifier("System", "Int64");
                 case "SByte": return new Identifier("System", "SByte");
                 case "Single": return new Identifier("System", "Single");
-                case "Stream": return new Identifier("Microsoft.OneDrive.RestProxy", "StreamLink");
+                case "Stream": return new Identifier("Microsoft.OData.Client", "DataServiceStreamLink");
                 case "String": return new Identifier("System", "String");
                 case "TimeOfDay": return new Identifier("System", "DateTimeOffset");
+                case "IStream": return new Identifier("System.IO", "Stream");
             }
 
             return null;
@@ -206,17 +207,17 @@ namespace ODCSharpWriter
 
         private static Identifier ResolveIdentifier(OdcmType odcmType)
         {
-            return ResolveIdentifier(odcmType.Namespace, odcmType.Name);
+            return ResolveIdentifier(odcmType.Namespace.Name, odcmType.Name);
         }
 
         private static Identifier ResolveIdentifier(OdcmClass odcmContainer)
         {
-            return ResolveIdentifier(odcmContainer.Namespace, odcmContainer.Name);
+            return ResolveIdentifier(odcmContainer.Namespace.Name, odcmContainer.Name);
         }
 
         private static Identifier ResolveIdentifier(string @namespace, string name)
         {
-            var resolvedNamespace = ResolveNamespace(@namespace);
+            var resolvedNamespace = "global::" + ResolveNamespace(@namespace);
 
             var resolvedName = ResolveName(@namespace, name);
 

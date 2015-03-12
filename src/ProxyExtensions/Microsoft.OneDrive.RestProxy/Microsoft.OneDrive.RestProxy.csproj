@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BatchElementResult.cs" />
+    <Compile Include="Collection.cs" />
     <Compile Include="ComplexTypeBase.cs" />
     <Compile Include="DataServiceContextWrapper.cs" />
     <Compile Include="EntityBase.cs" />

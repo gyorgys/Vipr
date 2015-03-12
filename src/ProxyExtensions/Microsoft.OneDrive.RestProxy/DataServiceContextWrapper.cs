@@ -14,7 +14,7 @@ namespace Microsoft.OneDrive.RestProxy
         private System.Func<System.Threading.Tasks.Task> _accessTokenSetter;
         private HashSet<EntityBase> _modifiedEntities = new HashSet<EntityBase>();
 
-        public Uri BaseUri { get;  }
+        public Uri BaseUri { get { return null; } }
 
         public void UpdateObject(EntityBase entity)
         {
@@ -36,7 +36,7 @@ namespace Microsoft.OneDrive.RestProxy
         }
 
 
-        internal Task<T> ExecuteSingleAsync<T1, T2>(Query<T> query)
+        internal Task<T2> ExecuteSingleAsync<T1, T2>(Query<T2> query)
         {
             throw new NotImplementedException();
         }
@@ -57,6 +57,16 @@ namespace Microsoft.OneDrive.RestProxy
         }
 
         internal Task SaveChangesAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal Task<StreamResponse> GetReadStreamAsync(EntityBase _entity, string _propertyName, string ContentType)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal object ExecuteAsync<T1, T2>(string _continuationToken)
         {
             throw new NotImplementedException();
         }

@@ -19,17 +19,9 @@ namespace Microsoft.OneDrive.RestProxy
             return new Uri(Context.BaseUri.ToString().TrimEnd('/') + "/" + _path);
         }
 
-        protected string GetPath<TInstance>(Expression<Func<TInstance, bool>> whereExpression) where TInstance : TSource
-        {
-            var query = (Query)System.Linq.Queryable.Where(Context.CreateQuery<TInstance>(_path), whereExpression);
-
-            var path = query.RequestUri.ToString().Substring(Context.BaseUri.ToString().TrimEnd('/').Length + 1);
-
-            return path;
-        }
 
         public QueryableSet(
-            DataServiceQuery inner,
+            Query inner,
             DataServiceContextWrapper context,
             EntityBase entity,
             string path)
@@ -38,7 +30,7 @@ namespace Microsoft.OneDrive.RestProxy
             Initialize(inner, context, entity, path);
         }
 
-        public void Initialize(DataServiceQuery inner,
+        public void Initialize(Query inner,
             DataServiceContextWrapper context,
             EntityBase entity,
             string path)

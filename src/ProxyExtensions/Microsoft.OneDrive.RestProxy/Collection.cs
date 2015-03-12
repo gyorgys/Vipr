@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Microsoft.OneDrive.RestProxy
 {
-    public class RequestArgs
+    public class Collection<T>
     {
-        public string ContentType { get; set; }
+        public string ContinuationToken { get; set; }
     }
 }

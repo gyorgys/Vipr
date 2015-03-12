@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Microsoft.OneDrive.RestProxy
 {
-    class QueryOperationResponse<T>
+    public class QueryOperationResponse<T>
     {
         internal string GetContinuationToken()
         {

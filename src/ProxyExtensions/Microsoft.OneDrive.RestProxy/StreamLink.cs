@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Microsoft.OneDrive.RestProxy
 {
-    class StreamLink
+    public class StreamLink
     {
         public string ContentType { get; set; }
     }
