@@ -77,6 +77,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestReaderWriter", "test\Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoubleReader", "test\Shared\DoubleReader\DoubleReader.csproj", "{48AD9942-A216-4EEA-BB4B-DD336449042C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ODCSharpWriter", "src\Writers\ODCSharpWriter\ODCSharpWriter.csproj", "{0B4C7D31-A67D-4FE5-802B-8140F7498A69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.OneDrive.RestProxy", "src\ProxyExtensions\Microsoft.OneDrive.RestProxy\Microsoft.OneDrive.RestProxy.csproj", "{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Android|Any CPU = Android|Any CPU
@@ -574,6 +578,62 @@ Global
 		{48AD9942-A216-4EEA-BB4B-DD336449042C}.Xamarin|Mixed Platforms.Build.0 = Release|Any CPU
 		{48AD9942-A216-4EEA-BB4B-DD336449042C}.Xamarin|x64.ActiveCfg = Release|Any CPU
 		{48AD9942-A216-4EEA-BB4B-DD336449042C}.Xamarin|x86.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Android|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Android|Any CPU.Build.0 = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Android|ARM.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Android|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Android|Mixed Platforms.Build.0 = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Android|x64.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Android|x86.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Release|ARM.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Release|x64.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Release|x86.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Xamarin|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Xamarin|Any CPU.Build.0 = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Xamarin|ARM.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Xamarin|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Xamarin|Mixed Platforms.Build.0 = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Xamarin|x64.ActiveCfg = Release|Any CPU
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69}.Xamarin|x86.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Android|Any CPU.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Android|Any CPU.Build.0 = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Android|ARM.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Android|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Android|Mixed Platforms.Build.0 = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Android|x64.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Android|x86.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Release|ARM.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Release|x64.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Release|x86.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Xamarin|Any CPU.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Xamarin|Any CPU.Build.0 = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Xamarin|ARM.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Xamarin|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Xamarin|Mixed Platforms.Build.0 = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Xamarin|x64.ActiveCfg = Release|Any CPU
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4}.Xamarin|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -607,5 +667,7 @@ Global
 		{40977593-9DA2-4BE5-84C8-E156111CD133} = {4C206AF5-B1FA-4F2F-A422-474913E96FC4}
 		{8B06C628-32B4-4AB0-A463-E4DE44545E3D} = {5E7779C3-0CA4-4938-8C42-96572D97162C}
 		{48AD9942-A216-4EEA-BB4B-DD336449042C} = {5E7779C3-0CA4-4938-8C42-96572D97162C}
+		{0B4C7D31-A67D-4FE5-802B-8140F7498A69} = {016282B3-A368-4D11-A200-8E1E2FFB129C}
+		{51FC76BC-DCFD-41CB-898D-E16920BEA2C4} = {B9D1484F-06EF-49BF-81A1-6B780FCAC0AA}
 	EndGlobalSection
 EndGlobal
