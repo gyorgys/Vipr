@@ -13,12 +13,12 @@ namespace Microsoft.OneDrive.RestProxy
 
         public global::System.Threading.Tasks.Task<IPagedCollection<TSource>> ExecuteAsync()
         {
-            return base.ExecuteAsyncInternal();
+            return base.ExecuteAsyncpublic();
         }
 
         public global::System.Threading.Tasks.Task<TSource> ExecuteSingleAsync()
         {
-            return base.ExecuteSingleAsyncInternal();
+            return base.ExecuteSingleAsyncpublic();
         }
     }
 }

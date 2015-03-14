@@ -30,43 +30,43 @@ namespace Microsoft.OneDrive.RestProxy
         }
 
 
-        internal Task<IPagedCollection> ExecuteAsync<T1, T2>(Query query)
+        public Task<IPagedCollection> ExecuteAsync<T1, T2>(Query query)
         {
             throw new NotImplementedException();
         }
 
 
-        internal Task<T2> ExecuteSingleAsync<T1, T2>(Query<T2> query)
+        public Task<T2> ExecuteSingleAsync<T1, T2>(Query<T2> query)
         {
             throw new NotImplementedException();
         }
 
-        internal Query CreateQuery<T1>(string p)
+        public Query CreateQuery<T1>(string p)
         {
             throw new NotImplementedException();
         }
 
-        internal void UpdateObject(RestShallowObjectFetcher restShallowObjectFetcher)
+        public void UpdateObject(RestShallowObjectFetcher restShallowObjectFetcher)
         {
             throw new NotImplementedException();
         }
 
-        internal void DeleteObject(RestShallowObjectFetcher restShallowObjectFetcher)
+        public void DeleteObject(RestShallowObjectFetcher restShallowObjectFetcher)
         {
             throw new NotImplementedException();
         }
 
-        internal Task SaveChangesAsync()
+        public Task SaveChangesAsync()
         {
             throw new NotImplementedException();
         }
 
-        internal Task<StreamResponse> GetReadStreamAsync(EntityBase _entity, string _propertyName, string ContentType)
+        public Task<StreamResponse> GetReadStreamAsync(EntityBase _entity, string _propertyName, string ContentType)
         {
             throw new NotImplementedException();
         }
 
-        internal object ExecuteAsync<T1, T2>(string _continuationToken)
+        public object ExecuteAsync<T1, T2>(string _continuationToken)
         {
             throw new NotImplementedException();
         }

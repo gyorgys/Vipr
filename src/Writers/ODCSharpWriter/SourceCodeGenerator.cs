@@ -905,32 +905,7 @@ namespace ODCSharpWriter
 
                 using (_builder.IndentBraced)
                 {
-                    _("if (this.{0} == default({1}))", property.FieldName, property.Type);
-
-                    using (_builder.IndentBraced)
-                    {
-                        _("this.{0} = new {1}<{2}>();", property.FieldName,
-                            NamesService.GetExtensionTypeName("NonEntityTypeCollectionImpl"), property.InstanceType);
-                        _("this.{0}.SetContainer(() => GetContainingEntity(\"{1}\"));", property.FieldName, property.ModelName);
-                    }
-
-                    _("return this.{0};", property.FieldName);
-                }
-                _("set");
-                using (_builder.IndentBraced)
-                {
-                    _("{0}.Clear();", property.FieldName);
-                    _("if (value != null)");
-
-                    using (_builder.IndentBraced)
-                    {
-                        _("foreach (var i in value)");
-
-                        using (_builder.IndentBraced)
-                        {
-                            _("{0}.Add(i);", property.FieldName);
-                        }
-                    }
+                    _("return ({1})this.{0};", property.FieldName, property.Type);
                 }
             }
         }
@@ -1068,7 +1043,7 @@ namespace ODCSharpWriter
 
         private void WriteDebugComment()
         {
-            if (Debugger.IsAttached)
+            if (false) //Debugger.IsAttached)
             {
                 var zed = new StackFrame(2, true);
                 _builder.WriteLine("// {0}", zed.ToString());

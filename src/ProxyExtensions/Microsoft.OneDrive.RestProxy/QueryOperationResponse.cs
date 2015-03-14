@@ -7,12 +7,12 @@ namespace Microsoft.OneDrive.RestProxy
 {
     public class QueryOperationResponse<T>
     {
-        internal string GetContinuationToken()
+        public string GetContinuationToken()
         {
             throw new NotImplementedException();
         }
 
-        internal IReadOnlyList<T> ToList()
+        public IReadOnlyList<T> ToList()
         {
             throw new NotImplementedException();
         }

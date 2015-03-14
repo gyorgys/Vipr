@@ -49,6 +49,7 @@
     <Compile Include="IReadOnlyQueryableSet.cs" />
     <Compile Include="IReadOnlyQueryableSetBase.cs" />
     <Compile Include="IStreamFetcher.cs" />
+    <Compile Include="KeyAttribute.cs" />
     <Compile Include="LowerCasePropertyAttribute.cs" />
     <Compile Include="NonEntityTypeCollectionImpl.cs" />
     <Compile Include="OperationParameter.cs" />

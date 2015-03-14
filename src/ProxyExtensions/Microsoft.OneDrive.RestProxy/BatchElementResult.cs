@@ -2,7 +2,7 @@ using System;
 
 namespace Microsoft.OneDrive.RestProxy
 {
-    internal class BatchElementResult : IBatchElementResult
+    public class BatchElementResult : IBatchElementResult
     {
         public BatchElementResult(IPagedCollection successResult)
         {

@@ -83,7 +83,7 @@ namespace ODCSharpWriter
                 case "Int64": return new Identifier("System", "Int64");
                 case "SByte": return new Identifier("System", "SByte");
                 case "Single": return new Identifier("System", "Single");
-                case "Stream": return new Identifier("Microsoft.OData.Client", "DataServiceStreamLink");
+                case "Stream": return new Identifier("Microsoft.OneDrive.RestProxy", "StreamLink");
                 case "String": return new Identifier("System", "String");
                 case "TimeOfDay": return new Identifier("System", "DateTimeOffset");
                 case "IStream": return new Identifier("System.IO", "Stream");

@@ -19,7 +19,6 @@ namespace ODCSharpWriter
         public static IEnumerable<Property> ForConcreteInterface(OdcmClass odcmClass)
         {
             return GetStructuralProperties(odcmClass);
-                //.Concat(GetIConcreteNavigationPropertiesForConcrete(odcmClass));
         }
 
         public static IEnumerable<Property> ForConcrete(OdcmClass odcmClass)

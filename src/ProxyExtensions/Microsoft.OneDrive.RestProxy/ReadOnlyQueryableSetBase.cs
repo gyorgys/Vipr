@@ -109,7 +109,7 @@ namespace Microsoft.OneDrive.RestProxy
 
         #endregion
 
-        protected global::System.Threading.Tasks.Task<IPagedCollection<TSource>> ExecuteAsyncInternal()
+        protected global::System.Threading.Tasks.Task<IPagedCollection<TSource>> ExecuteAsyncpublic()
         {
             if (_concreteType.Value != null)
             {
@@ -130,7 +130,7 @@ namespace Microsoft.OneDrive.RestProxy
             }
         }
 
-        protected global::System.Threading.Tasks.Task<TSource> ExecuteSingleAsyncInternal()
+        protected global::System.Threading.Tasks.Task<TSource> ExecuteSingleAsyncpublic()
         {
             if (_concreteType.Value != null)
             {

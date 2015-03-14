@@ -23,7 +23,7 @@ namespace Vipr.Core
 
         public static IEnumerable<OdcmProperty> StructuralProperties(this OdcmClass odcmClass)
         {
-            return odcmClass.Properties.WhereIsNavigation(false);
+            return odcmClass.Properties; //.WhereIsNavigation(false);
         }
 
         public static IEnumerable<OdcmClass> NestedDerivedTypes(this OdcmClass odcmClass)

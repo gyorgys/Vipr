@@ -42,7 +42,7 @@ namespace ODCSharpWriter
             {
                 Name = NamesService.GetPropertyFieldName(property),
                 Type = property.IsCollection
-                    ? new Type(NamesService.GetExtensionTypeName("NonEntityTypeCollectionImpl"), new Type(NamesService.GetConcreteTypeName(property.Type)))
+                    ? new Type(NamesService.GetExtensionTypeName("List"), new Type(NamesService.GetConcreteTypeName(property.Type)))
                     : TypeService.GetPropertyType(property)
             };
         }

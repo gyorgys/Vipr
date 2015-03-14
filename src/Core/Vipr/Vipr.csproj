@@ -82,6 +82,10 @@
       <Project>{ea55efcf-3127-4e85-9a37-a645c06ffcc1}</Project>
       <Name>CSharpWriter</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Writers\ODCSharpWriter\ODCSharpWriter.csproj">
+      <Project>{0b4c7d31-a67d-4fe5-802b-8140f7498a69}</Project>
+      <Name>ODCSharpWriter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Vipr.Core\Vipr.Core.csproj">
       <Project>{04c24936-006a-4fd8-a872-ee55588c1cbe}</Project>
       <Name>Vipr.Core</Name>

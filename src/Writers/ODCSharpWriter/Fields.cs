@@ -39,9 +39,7 @@ namespace ODCSharpWriter
 
         public static IEnumerable<Field> ForConcrete(OdcmClass odcmClass)
         {
-            return GetNavigationFields(odcmClass)
-                .Concat(GetFetcherFields(odcmClass))
-                .Concat(GetStructuralFields(odcmClass));
+            return GetStructuralFields(odcmClass);
         }
 
         public static IEnumerable<Field> ForFetcher(OdcmClass odcmClass)
